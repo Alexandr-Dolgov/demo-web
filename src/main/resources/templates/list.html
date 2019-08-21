@@ -3,5 +3,8 @@
 <body>
 <h1>Hello</h1>
 <p>Welcome to application "<span th:text="${appName}">App name</span>"</p>
+<ul>
+    <li th:each="item : ${list}" th:text="${item.text}">text</li>
+</ul>
 </body>
 </html>
