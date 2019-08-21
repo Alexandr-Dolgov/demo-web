@@ -1,10 +1,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
 <head><title>Home Page</title></head>
 <body>
-<h1>Hello</h1>
-<p>Welcome to application "<span th:text="${appName}">App name</span>"</p>
-<ul>
-    <li th:each="item : ${list}" th:text="${item.text}">text</li>
-</ul>
+<h1>Welcome to application "<span th:text="${appName}">App name</span>"</h1>
+
+<div th:each="item : ${list}">
+    <div>
+        <span th:text="${item.text}">text</span>
+        <span th:text="${item.likes}">0</span>
+    </div>
+</div>
+
 </body>
 </html>
