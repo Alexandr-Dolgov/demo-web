@@ -6,7 +6,7 @@
 <div th:each="item : ${list}">
     <div>
         <span th:text="${item.text}">text</span>
-        <span th:text="${item.likes}">0</span>
+        <span th:text="${item.likes + ' ❤'}">0</span>
     </div>
 </div>
 
