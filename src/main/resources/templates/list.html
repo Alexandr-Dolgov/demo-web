@@ -3,10 +3,10 @@
 <body>
 <h1>Welcome to application "<span th:text="${appName}">App name</span>"</h1>
 
-<div th:each="item : ${list}">
-    <div>
-        <span th:text="${item.text}">text</span>
-        <span th:text="${item.likes + ' ❤'}">0</span>
+<div th:each="item : ${list}" class="post-block">
+    <div class="title-block">
+        <span th:text="${item.text}" class="title">text</span>
+        <span th:text="${item.likes + ' ❤'}" class="likes">0</span>
     </div>
 </div>
 
