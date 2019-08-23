@@ -12,9 +12,9 @@ public class PostsService {
     public List<Post> listAllPosts() {
         List<Post> posts = new ArrayList<>();
 
-        posts.add(new Post("Первый пост в списке"));
-        posts.add(new Post("Второй пост в списке"));
-        posts.add(new Post("Третий пост в списке"));
+        posts.add(new Post(0L, "Первый пост в списке", 0));
+        posts.add(new Post(1L, "Второй пост в списке", 0));
+        posts.add(new Post(2L, "Третий пост в списке", 0));
 
         return posts;
     }
