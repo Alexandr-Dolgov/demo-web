@@ -13,7 +13,7 @@
         <div class="content">
             <div class="row article" th:each="post : ${list}">
                 <div class="col-md-10 col-md-offset-1">
-                    <h3 th:text="${'Post #' + post.id}">Post #1</h3>
+                    <a th:href="${'/post/' + post.id}"><h3 th:text="${'Post #' + post.id}">Post #1</h3></a>
                 </div>
 <!--                <div class="col-md-10 col-md-offset-1 text-center">-->
 <!--                    <p><img src="images/image.jpg"></p>-->
