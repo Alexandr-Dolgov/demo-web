@@ -28,4 +28,9 @@ public class PostsViewController {
         return "Здесь будет страница с картинкой " + id;
     }
 
+    @RequestMapping(path = "/new", method = RequestMethod.GET)
+    public String create() {
+        return "create";
+    }
+
 }

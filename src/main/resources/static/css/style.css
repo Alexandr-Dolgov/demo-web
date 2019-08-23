@@ -1,0 +1,153 @@
+body {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.7;
+  color: gray;
+  background: #e8e8e8;
+}
+
+#page {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+a {
+  color: #66D37E;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+a:hover, a:active, a:focus {
+  color: #66D37E;
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.article {
+  margin-bottom: 5em;
+}
+
+h1, h2, h3, h4, h5, h6, figure {
+  color: #000;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+}
+
+.container-wrap {
+  max-width: 1060px;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  background: #fff;
+}
+
+.style-nav {
+  margin: 5em 0 0 0;
+}
+
+.style-nav .top-menu {
+  padding: 34px 30px 24px;
+}
+
+.style-nav #style-logo {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.style-nav #style-logo a span {
+  color: #66D37E;
+}
+.style-nav a {
+  padding: 5px 10px;
+  color: #000;
+}
+.style-nav ul {
+  padding: 0;
+  margin: 5px 0 0 0;
+}
+.style-nav ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: inline;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.style-nav ul li a {
+  position: relative;
+  font-size: 13px;
+  padding: 30px 12px;
+  color: rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.style-nav ul li a:after {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  content: '';
+  width: 58%;
+  height: 2px;
+  background: #66D37E;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transform: translate3d(0, -10px, 0);
+  transform: translate3d(0, -10px, 0);
+}
+
+.style-nav ul li a:hover {
+  color: #000;
+}
+.style-nav ul li a:hover:after {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.style-nav ul li.active > a {
+  color: #000 !important;
+  position: relative;
+}
+.style-nav ul li.active > a:after {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.content {
+  padding: 2em 0;
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.description-text {
+  align-self: flex-start;
+  margin-right: 1em;
+}
+
+.like {
+  align-self: flex-end;
+}
+

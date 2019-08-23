@@ -1,14 +1,30 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
-<head><title>Home Page</title></head>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <head th:replace="head :: headerFragment (pageTitle='New post')">
+    </head>
 <body>
-<h1>Welcome to application "<span th:text="${appName}">App name</span>"</h1>
 
-<div th:each="item : ${list}" class="post-block">
-    <div class="title-block">
-        <span th:text="${item.text}" class="title">text</span>
-        <span th:text="${item.likes + ' ❤'}" class="likes">0</span>
+<div id="page">
+
+    <div th:replace="nav :: nav"></div>
+
+    <div class="container-wrap">
+        <div class="content">
+            <div class="row article" th:each="post : ${list}">
+                <div class="col-md-10 col-md-offset-1">
+                    <h3 th:text="${'Post #' + post.id}">Post #1</h3>
+                </div>
+<!--                <div class="col-md-10 col-md-offset-1 text-center">-->
+<!--                    <p><img src="images/image.jpg"></p>-->
+<!--                </div>-->
+                <div class="col-md-8 col-md-offset-2 description">
+                    <h4 class="description-text" th:text="${post.text}">Text</h4>
+                    <button class="btn btn-sm btn-secondary like" th:text="${post.likes + ' ❤'}">0 ❤</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
 </body>
 </html>
