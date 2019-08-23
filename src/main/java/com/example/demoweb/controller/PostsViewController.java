@@ -21,9 +21,8 @@ public class PostsViewController {
     }
 
     @RequestMapping(path = "/post/{id}", method = RequestMethod.GET)
-    public String single(@PathVariable("id") Integer id, Model model) {
-        model.addAttribute("list",
-                postsService.listAllPosts().subList(id, id + 1));
+    public String single(@PathVariable("id") Long id, Model model) {
+        model.addAttribute("list", postsService.filterById(id));
         return "list";
     }
 
