@@ -15,9 +15,6 @@
                 <div class="col-md-10 col-md-offset-1">
                     <a th:href="${'/post/' + post.id}"><h3 th:text="${'Post #' + post.id}">Post #1</h3></a>
                 </div>
-<!--                <div class="col-md-10 col-md-offset-1 text-center">-->
-<!--                    <p><img src="images/image.jpg"></p>-->
-<!--                </div>-->
                 <div class="col-md-8 col-md-offset-2 description">
                     <h4 class="description-text" th:text="${post.text}">Text</h4>
                     <button class="btn btn-sm btn-secondary like" th:attr="data-postid=${post.id}" th:text="${post.likes + ' ❤'}">0 ❤</button>
