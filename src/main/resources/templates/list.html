@@ -20,7 +20,7 @@
 <!--                </div>-->
                 <div class="col-md-8 col-md-offset-2 description">
                     <h4 class="description-text" th:text="${post.text}">Text</h4>
-                    <button class="btn btn-sm btn-secondary like" th:text="${post.likes + ' ❤'}">0 ❤</button>
+                    <button class="btn btn-sm btn-secondary like" th:attr="data-postid=${post.id}" th:text="${post.likes + ' ❤'}">0 ❤</button>
                 </div>
             </div>
         </div>
