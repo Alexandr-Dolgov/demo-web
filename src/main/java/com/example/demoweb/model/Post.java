@@ -15,6 +15,10 @@ public class Post {
         this.creationDate = creationDate;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public String getText() {
         return text;
     }
